@@ -1,24 +1,36 @@
 import '../css/style.css'
-import fishImage from '../images/fish.png'
-import { PLayer } from "../player";
+import { Actor, Engine, Random, Vector } from "excalibur"
+import { Resources, ResourceLoader } from './resources.js'
+import { PLayer } from './player'
+import { Enemy } from './enemy'
+//import { Background} from './background'
 
-const div = document.createElement("div")
-div.classList.add("fish")
-document.body.appendChild(div)
+export class Game extends Engine {
 
-const img = document.createElement("img")
-img.src = fishImage
-div.appendChild(img)
+    constructor() {
+        super({ width: 1280, height: 720 })
+        this.start(ResourceLoader).then(() => this.startGame())
+        this.showDebug(true) 
+        this.debug.transform.showAll = true
 
+    }
 
-let mario = new PLayer()
-mario.name = "Mario"
-mario.color = "Red"
-mario.score = 1
-mario.showName()
+    startGame() {
+        console.log("start de game!")
+  
+        const p = new PLayer(100, 200)
+       // const b = new Background ()
+        this.add(p)
+       // this.add(b)
 
-let luigi = new PLayer()
-luigi.name = "Mario"
-luigi.color = "Green"
-luigi.score = 1
-luigi.showName
+        // for loop
+        for(let i = 0; i<30;i++){
+            const e = new Enemy ()
+            this.add(e)
+
+        }
+
+    }
+}
+
+new Game()
