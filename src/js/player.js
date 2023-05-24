@@ -6,11 +6,11 @@ export class PLayer extends Actor{
     color
     score
     constructor( posX, posY){
-        super({width: Resources.Goose.width, height: Resources.Goose.height})
+        super({width: Resources.Ninja.width, height: Resources.Ninja.height})
         this.pos = new Vector (posX, posY)
         this.vel = new Vector (-10, 40 )
-        this.graphics.use(Resources.Goose.toSprite())
-        this.scale= new Vector ( 0.1, 0.1)
+        this.graphics.use(Resources.Ninja.toSprite())
+        this.scale= new Vector ( 0.5, 0.5)
 
 
         console.log('player aangemaakt!')
