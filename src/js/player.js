@@ -1,4 +1,4 @@
-import { Actor, Resource, Vector, Input } from "excalibur"
+import { Actor, Resource, Vector, Input, CollisionType } from "excalibur"
 import { Resources } from "./resources"
 
 export class PLayer extends Actor{
@@ -10,7 +10,10 @@ export class PLayer extends Actor{
         this.pos = new Vector (posX, posY)
         this.vel = new Vector (-10, 40 )
         this.graphics.use(Resources.Ninja.toSprite())
-        this.scale= new Vector ( 0.5, 0.5)
+        this.scale= new Vector ( 0.7, 0.7)
+        this.body.collisionType= CollisionType.Active
+        this.body.useGravity=true
+        
 
 
         console.log('player aangemaakt!')
@@ -18,8 +21,8 @@ export class PLayer extends Actor{
     }
 
     hitSomething(event){       
-         event.other.kill()   
-        console.log('HIT') 
+     //    event.other.kill()   
+       // console.log('HIT') 
     }
 
     showName() {

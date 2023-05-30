@@ -22,7 +22,7 @@ export class Enemy extends Actor{
     
 
     hitSomething(event){       
-        // event.other.kill()    
+         event.other.kill()    
     }
 
     showName() {

@@ -7,18 +7,18 @@ export class Background extends Actor {
     offset
     
     onInitialize(engine){
-        const bgImange = Resources.Bg.toSprite()
-        this.offset = bgImange.width
+        const nightskyImage = Resources.Night.toSprite()
+        this.offset = nightskyImage.width
 
         const group = new GraphicsGroup({
             members: [
                 {
-                    graphic: bgImange,
+                    graphic: nightskyImage,
                     pos: new Vector(0, 0),
                 },
                 {
-                    graphic: bgImange,
-                    pos: new Vector(spaceImage.width, 0),
+                    graphic: nightskyImage,
+                    pos: new Vector(nightskyImage.width, 0),
                 }
             ]
         })
