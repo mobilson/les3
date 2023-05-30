@@ -1,12 +1,12 @@
 import {Actor, CollisionType, Engine, GraphicsGroup, Input, Shape, Vector} from "excalibur";
 import {Resources} from "./resources.js";
 
-export class Ground extends Actor {
+export class Ground2 extends Actor {
     constructor() {
         super({
             width: Resources.Ground.width,
             height: Resources.Ground.height,
-            pos: new Vector(700, 760)
+            pos: new Vector(2000, 760)
         })
         this.scale= new Vector ( 2, 1)
 

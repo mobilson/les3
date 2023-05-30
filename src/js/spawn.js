@@ -1,5 +1,5 @@
 import {Actor, Random, Timer} from "excalibur";
-import {Shuriken} from "./enemy.js";
+import {Enemy} from "./enemy.js";
 
 export class Spawner extends Actor{
 
@@ -13,7 +13,7 @@ export class Spawner extends Actor{
     onInitialize(engine) {
         this.timer = new Timer({
             fcn: () => this.spawn(engine),
-            interval: 1000,
+            interval: 3000,
             repeats: true
         })
         engine.currentScene.add(this.timer)
@@ -22,10 +22,10 @@ export class Spawner extends Actor{
 
     spawn(engine) {
         console.log("spawn")
-        const shuriken = new Shuriken(
+        const shuriken = new Enemy(
             this.random.integer(0, 800),
             this.random.integer(0, 600)
         )
-        engine.currentScene.add(rock)
+        engine.currentScene.add(shuriken)
     }
 }
