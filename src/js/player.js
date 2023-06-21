@@ -21,8 +21,8 @@ export class PLayer extends Actor{
     }
 
     hitSomething(event){       
-     //    event.other.kill()   
-       // console.log('HIT') 
+        event.other.kill()   
+        console.log('HIT') 
     }
 
     showName() {

@@ -8,7 +8,7 @@ export class Enemy extends Actor{
     constructor(){
         super({width: Resources.Shuriken.width, height: Resources.Shuriken.height})
         
-        this.pos = new Vector (1200,Math.random()*500)
+        this.pos = new Vector (1200,Math.random()*800)
         this.vel = new Vector (-100 + Math.random() * -300, 0 )
         this.graphics.use(Resources.Shuriken.toSprite())
         this.scale= new Vector ( 0.03, 0.03)
@@ -21,9 +21,9 @@ export class Enemy extends Actor{
 
     
 
-    hitSomething(event){       
-         event.other.kill()    
-    }
+    // hitSomething(event){       
+    //      event.other.kill()    
+   // }
 
     showName() {
         console.log(this.name);

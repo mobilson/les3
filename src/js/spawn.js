@@ -1,7 +1,7 @@
 import {Actor, Random, Timer} from "excalibur";
 import {Enemy} from "./enemy.js";
 
-export class Spawner extends Actor{
+export class Spawner extends Enemy{
 
     constructor() {
         super();

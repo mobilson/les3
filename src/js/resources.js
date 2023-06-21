@@ -4,6 +4,8 @@ import bgImange from '../images/sky.png'
 import ShurikenImange from '../images/shuriken.png'
 import nightskyImage from '../images/nightsky.png'
 import groundImage from '../images/ground.png'
+import heartImage from '../images/heart.png'
+import gameoverIamge from '../images/gameover.png'
 
 const Resources = {
 
@@ -12,6 +14,8 @@ const Resources = {
     Night: new ImageSource(nightskyImage),
     Shuriken: new ImageSource(ShurikenImange),
     Ground: new ImageSource(groundImage),
+    Heart: new ImageSource(heartImage),
+    Gameover: new ImageSource(gameoverIamge),
 
 }
 const ResourceLoader = new Loader([
@@ -20,7 +24,9 @@ const ResourceLoader = new Loader([
     Resources.Bg,
     Resources.Shuriken,
     Resources.Night,
-    Resources.Ground
+    Resources.Ground,
+    Resources.Heart,
+    Resources.Gameover
 ])
 
 export { Resources, ResourceLoader }

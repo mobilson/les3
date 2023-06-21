@@ -17,6 +17,7 @@ export class Game extends Engine {
     startGame() {
  this.addScene('roof', new Roof()  )
  this.goToScene('roof')
+ 
 }
 }
 

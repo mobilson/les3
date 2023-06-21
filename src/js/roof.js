@@ -7,6 +7,8 @@ import { Background} from './background'
 import { Ground } from './ground'
 import { Ground2 } from './ground2'
 import { Spawner } from './spawn'
+import { Heart } from './heart'
+import { Heart2 } from './heart2'
 
 export class Roof extends Scene {
 
@@ -31,6 +33,12 @@ export class Roof extends Scene {
         const b = new Background ()
         this.add(b)
 
+        // const h = new Heart ()
+        // this.add(h)
+
+        // const h2 = new Heart2()
+        // this.add(h2)
+
         const p = new PLayer(100, 500)
         this.add(p)
 
@@ -48,6 +56,16 @@ export class Roof extends Scene {
         // }
 
     }
+
+getHit(){
+    this.checkGameover()
 }
 
+checkGameover() {
+    if (this.player.x > 1280) {
+        this.game.goToScene("gameover")
+}
+
+}
+}
 new Roof()
