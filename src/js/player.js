@@ -6,11 +6,11 @@ export class PLayer extends Actor{
     color
     score
     constructor( posX, posY){
-        super({width: Resources.Ninja.width, height: Resources.Ninja.height})
+        super({width: Resources.Plane.width, height: Resources.Plane.height})
         this.pos = new Vector (posX, posY)
         // this.vel = new Vector (-10, 40 )
-        this.graphics.use(Resources.Ninja.toSprite())
-        this.scale= new Vector ( 0.7, 0.7)
+        this.graphics.use(Resources.Plane.toSprite())
+        this.scale= new Vector ( 0.4, 0.4)
         this.body.collisionType= CollisionType.Active
         this.body.useGravity=true
         
@@ -21,7 +21,9 @@ export class PLayer extends Actor{
     }
 
     hitSomething(event){       
-        event.other.kill()   
+        event.other.kill() 
+        this.game.goToScene("gameover")
+      
         console.log('HIT') 
     }
 

@@ -6,6 +6,10 @@ import nightskyImage from '../images/nightsky.png'
 import groundImage from '../images/ground.png'
 import heartImage from '../images/heart.png'
 import gameoverIamge from '../images/gameover.png'
+import gooseImage from '../images/goose.png'
+import planeIamge from '../images/plane.png'
+import startImage from '../images/start.png'
+import okIamge from '../images/ok.png'
 
 const Resources = {
 
@@ -16,6 +20,10 @@ const Resources = {
     Ground: new ImageSource(groundImage),
     Heart: new ImageSource(heartImage),
     Gameover: new ImageSource(gameoverIamge),
+    Goose:new ImageSource(gooseImage),
+    Plane:new ImageSource(planeIamge),
+    Start:new ImageSource(startImage), 
+    Ok:new ImageSource(okIamge)
 
 }
 const ResourceLoader = new Loader([
@@ -26,7 +34,11 @@ const ResourceLoader = new Loader([
     Resources.Night,
     Resources.Ground,
     Resources.Heart,
-    Resources.Gameover
+    Resources.Gameover,
+    Resources.Goose,
+    Resources.Plane,
+    Resources.Start,
+    Resources.Ok
 ])
 
 export { Resources, ResourceLoader }

@@ -42,11 +42,11 @@ export class Roof extends Scene {
         const p = new PLayer(100, 500)
         this.add(p)
 
-        const g = new Ground()
-        this.add (g)
+        // const g = new Ground()
+        // this.add (g)
 
-        const g2 = new Ground2()
-        this.add (g2)
+        // const g2 = new Ground2()
+        // this.add (g2)
 
        
         // for(let i = 0; i<30;i++){
@@ -57,15 +57,6 @@ export class Roof extends Scene {
 
     }
 
-getHit(){
-    this.checkGameover()
-}
 
-checkGameover() {
-    if (this.player.x > 1280) {
-        this.game.goToScene("gameover")
-}
-
-}
 }
 new Roof()
